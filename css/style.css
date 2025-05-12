@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px cyan;
+  }
+  
+  .name-inputs input {
+    width: 45%;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    color: #333;
+  }
+  
+  button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    background: #00ffff;
+    color: #000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background: #00cccc;
+    box-shadow: 0 0 20px #00ffff;
+    transform: scale(1.05);
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+  }
+      
+  
+  .player {
+    font-size: 1.5rem;
+    margin: 20px;
+  }
+  
+  .dice {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+    perspective: 500px; 
+    margin: 0 auto;
+  }
+  
+  #number {
+    position: absolute;
+  }
+  
+  @keyframes rollDice {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    25% {
+      transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+    }
+    50% {
+      transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+    }
+    75% {
+      transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+    }
+  }
